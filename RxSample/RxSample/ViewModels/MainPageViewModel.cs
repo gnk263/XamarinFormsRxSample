@@ -9,6 +9,9 @@ namespace RxSample.ViewModels
         public ReactiveProperty<long> Counter { get; }
         public ReactiveProperty<string> Counter2 { get; }
 
+        public ReactiveProperty<string> Input { get; } = new ReactiveProperty<string>("");
+        public ReactiveProperty<string> Output { get; }
+
         public MainPageViewModel()
         {
             Counter = Observable
@@ -18,6 +21,12 @@ namespace RxSample.ViewModels
             Counter2 = Observable
                 .Interval(TimeSpan.FromSeconds(1))
                 .Select(x => $"timer is {x} seconds.")
+                .ToReactiveProperty();
+
+
+            Output = Input
+                .Delay(TimeSpan.FromSeconds(1))
+                .Select(x => x.ToUpper())
                 .ToReactiveProperty();
         }
     }

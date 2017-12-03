@@ -21,10 +21,16 @@
         <StackLayout>
             <Label Text="{Binding Counter.Value}"
                    VerticalOptions="Center" 
-                   HorizontalOptions="StartAndExpand" />
+                   HorizontalOptions="FillAndExpand" />
             <Label Text="{Binding Counter2.Value}"
                    VerticalOptions="Center" 
-                   HorizontalOptions="StartAndExpand" />
+                   HorizontalOptions="FillAndExpand" />
+            <Entry Text="{Binding Input.Value}"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="FillAndExpand" />
+            <Label Text="{Binding Output.Value}"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="FillAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
