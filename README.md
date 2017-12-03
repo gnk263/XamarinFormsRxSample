@@ -1,0 +1,2 @@
+# XamarinFormsRxSample
+Xamarin.FormsでReactivePropertyを使用してみたサンプルです。
