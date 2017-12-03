@@ -31,6 +31,20 @@
             <Label Text="{Binding Output.Value}"
                    VerticalOptions="Center" 
                    HorizontalOptions="FillAndExpand" />
+            <Entry Text="{Binding Name.Value}"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="FillAndExpand" />
+            <Label Text="{Binding NameError.Value}"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="FillAndExpand" />
+            <Entry Text="{Binding Age.Value}"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="FillAndExpand" />
+            <Label Text="{Binding AgeError.Value}"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="FillAndExpand" />
+            <Button Text="Commit"
+                    Command="{Binding CommitCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
